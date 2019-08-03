@@ -143,7 +143,7 @@ sudo iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
 sudo iptables -I INPUT 1 -i lo -j ACCEPT
 ```
 
-Note: should always be last
+**Note**: should always be last
 
 ```sh
 sudo iptables -A INPUT -j DROP
