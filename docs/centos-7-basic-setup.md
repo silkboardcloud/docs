@@ -50,6 +50,7 @@ https://github.com/silkboardcloud/docs/blob/master/scripts/disable-selinux-on-ce
 ```sh
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
 sudo reboot
+#### To Verify try ssh root@server1.silkboard.in --->> it should say **permission denied, please try again** after entering password
 ```
 wait for sometime to reboot
 
