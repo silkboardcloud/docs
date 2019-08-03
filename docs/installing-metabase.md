@@ -12,6 +12,8 @@ sudo chmod +x metabase.jar
 sudo nano /etc/systemd/system/client_metabase.service
 ```
 
+### Create MySQL db 
+
 ```sh
 [Unit]
 Description=Client Metabase
@@ -37,6 +39,14 @@ Environment="MB_DB_HOST=dbserver1.silkboard.in"
 
 [Install]
 WantedBy=multi-user.target
+```
+CTRL+x to exit 
+Press Y and Enter to save
+
+```sh
+sudo systemctl enable client_metabase.service
+sudo systemctl start client_metabase.service
+# Verify - sudo systemctl start client_metabase.service
 ```
 
 ```sh
