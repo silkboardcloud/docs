@@ -22,12 +22,17 @@ To disable root logins, make sure you have the following entry `PermitRootLogin 
 ```sh
 sudo sed -i '/#PermitRootLogin yes/c\PermitRootLogin no' /etc/ssh/sshd_config
 sudo systemctl restart sshd
+exit
 ```
-
-- Now exit from root prompt and login as **cent** user
 
 ### Disable SELinux
 https://github.com/silkboardcloud/docs/blob/master/scripts/disable-selinux-on-cent-os-7.sh
+
+```sh
+sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
+```
+
+## login as **cent** user
 
 ### Setup Timezone
 
