@@ -42,6 +42,7 @@ ssh cent@server1.silkboard.com
 
 ### Setup Timezone
 
+if you are from india execute below lines, otherwise check your timezone [here](https://www.thegeekdiary.com/centos-rhel-7-how-to-change-timezone/)
 ```sh
 sudo rm /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
