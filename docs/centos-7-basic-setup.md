@@ -104,7 +104,7 @@ sudo systemctl start iptables
 sudo systemctl enable iptables
 ```
 
-**iptables**
+### Configure iptables
 
 ```sh
 sudo iptables -P INPUT ACCEPT
@@ -120,9 +120,7 @@ sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 ```
 
-###server
-
-**app**
+#### app
 
 ```sh
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
