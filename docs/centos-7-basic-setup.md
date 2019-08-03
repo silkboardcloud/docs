@@ -54,7 +54,9 @@ if hostname doesn't end with domain name
 
 mail from system may be rejected
 
-`sudo hostname server1.silkboard.in`
+```sh
+sudo hostname server1.silkboard.in
+```
 
 #### Setup Git
 
