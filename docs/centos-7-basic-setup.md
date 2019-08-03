@@ -22,7 +22,7 @@ To disable root logins, make sure you have the following entry `PermitRootLogin 
 ```sh
 sudo sed -i '/#PermitRootLogin yes/c\PermitRootLogin no' /etc/ssh/sshd_config
 sudo systemctl restart sshd
-exit
+## next execute disable selinux 
 ```
 
 ### Disable SELinux
@@ -30,6 +30,7 @@ https://github.com/silkboardcloud/docs/blob/master/scripts/disable-selinux-on-ce
 
 ```sh
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
+sudo reboot
 ```
 
 ## login as **cent** user
