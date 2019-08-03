@@ -7,3 +7,9 @@ We prefer using below stack
 - NGINX
 - NodeJS
 - AngularJS 1.x
+- IPTables
+- MySQL
+- Metabase
+- Mailtrain
+- Mailforgood
+- Erxes
