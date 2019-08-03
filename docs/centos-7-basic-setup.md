@@ -68,6 +68,9 @@ git config --global user.email "$USER@$(hostname)"
 
 ```sh
 ssh-keygen -t rsa -b 4096 -C "$(git config --global user.email)"
+# first enter
+# second enter
+cat ~/.ssh/id_rsa.pub
 ```
  
  - add it to github if you need to pull code without password
