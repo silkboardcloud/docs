@@ -1,8 +1,8 @@
 ### Update OS with to Latest
 
 ```sh
-sudo yum install epel-release 
-sudo yum update
+sudo yum install epel-release -y
+sudo yum update -y
 ```
 
 #### with root login
@@ -10,6 +10,7 @@ sudo yum update
 ```sh
 useradd cent
 passwd cent
+# prompts for password, give your secret strong password
 usermod cent -aG wheel 
 ```
 
@@ -21,6 +22,7 @@ mail from system may be rejected
 
 ```sh
 sudo hostname server1.silkboard.in
+### Verify using `hostname` -> it will show server1.silkboard.in
 ```
 
 ### Setup Timezone
@@ -54,7 +56,7 @@ sudo reboot
 ```
 wait for sometime to reboot
 
-## login as **cent** user
+## Login as **cent** user
 
 ```sh
 ssh cent@server1.silkboard.com
