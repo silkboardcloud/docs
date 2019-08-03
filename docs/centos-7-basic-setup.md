@@ -13,6 +13,24 @@ passwd cent
 usermod cent -aG wheel 
 ```
 
+#### Setup hostname 
+
+if hostname doesn't end with domain name
+
+mail from system may be rejected
+
+```sh
+sudo hostname server1.silkboard.in
+```
+
+### Setup Timezone
+
+if you are from india execute below lines, otherwise check your timezone [here](https://www.thegeekdiary.com/centos-rhel-7-how-to-change-timezone/)
+```sh
+sudo rm /etc/localtime
+sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+```
+
 #### Disable Root login
 
 SSH server settings are stored in the `/etc/ssh/sshd_config` file.
@@ -28,34 +46,17 @@ sudo systemctl restart sshd
 ### Disable SELinux
 https://github.com/silkboardcloud/docs/blob/master/scripts/disable-selinux-on-cent-os-7.sh
 
+
 ```sh
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
 sudo reboot
 ```
 wait for sometime to reboot
 
-```sh
-ssh cent@server1.silkboard.com
-```
-
 ## login as **cent** user
 
-### Setup Timezone
-
-if you are from india execute below lines, otherwise check your timezone [here](https://www.thegeekdiary.com/centos-rhel-7-how-to-change-timezone/)
 ```sh
-sudo rm /etc/localtime
-sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-```
-
-#### setup hostname 
-
-if hostname doesn't end with domain name
-
-mail from system may be rejected
-
-```sh
-sudo hostname server1.silkboard.in
+ssh cent@server1.silkboard.com
 ```
 
 #### Setup Git
@@ -74,7 +75,6 @@ ssh-keygen -t rsa -b 4096 -C "$(git config --global user.email)"
 # second enter
 cat ~/.ssh/id_rsa.pub
 ```
-
  
  - add it to github(https://github.com/settings/ssh/new) if you need to pull code without password
 
