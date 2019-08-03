@@ -26,6 +26,8 @@ sudo systemctl restart sshd
 
 - Now exit from root prompt and login as **cent** user
 
+### Disable SELinux
+https://github.com/silkboardcloud/docs/blob/master/scripts/disable-selinux-on-cent-os-7.sh
 
 ### Setup Timezone
 
