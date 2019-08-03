@@ -32,6 +32,11 @@ https://github.com/silkboardcloud/docs/blob/master/scripts/disable-selinux-on-ce
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
 sudo reboot
 ```
+wait for sometime to reboot
+
+```sh
+ssh cent@server1.silkboard.com
+```
 
 ## login as **cent** user
 
@@ -48,7 +53,7 @@ if hostname doesn't end with domain name
 
 mail from system may be rejected
 
-`sudo hostname $HOSTNAME`
+`sudo hostname server1.silkboard.in`
 
 #### Setup Git
 
