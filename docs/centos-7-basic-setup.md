@@ -129,28 +129,32 @@ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 ```
 
-**db**
+##### DB - only if mysql server
 
 ```sh
-sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
 ```
 
 ### END
 
-**loopback**
+##### loopback
 
-`sudo iptables -I INPUT 1 -i lo -j ACCEPT`
+```sh
+sudo iptables -I INPUT 1 -i lo -j ACCEPT
+```
 
-**should always be last**
+Note: should always be last
 
-`sudo iptables -A INPUT -j DROP`
+```sh
+sudo iptables -A INPUT -j DROP
+```
 
 ### Finally Save Rules
 
-`sudo service iptables save`
-
-`sudo systemctl restart iptables`
+```sh
+sudo service iptables save
+sudo systemctl restart iptables
+```
 
  
  
