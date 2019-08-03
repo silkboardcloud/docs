@@ -120,7 +120,7 @@ sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 ```
 
-#### app
+#### App - If you use nginx and ssl
 
 ```sh
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
