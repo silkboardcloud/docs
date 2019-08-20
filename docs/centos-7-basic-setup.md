@@ -24,6 +24,13 @@ mail from system may be rejected
 sudo hostname server1.silkboard.in
 ### Verify using `hostname` -> it will show server1.silkboard.in
 ```
+### Remove firewalld
+
+```sh
+sudo systemctl mask firewalld
+sudo systemctl stop firewalld
+sudo yum remove firewalld
+```
 
 ### Setup Timezone
 
@@ -88,13 +95,6 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 
-### Remove firewalld
-
-```sh
-sudo systemctl mask firewalld
-sudo systemctl stop firewalld
-sudo yum remove firewalld
-```
 
 ### Install iptables
 
