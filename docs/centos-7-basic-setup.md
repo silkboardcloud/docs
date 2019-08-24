@@ -72,7 +72,7 @@ ssh cent@server1.silkboard.com
 #### Setup Git
 
 ```sh
-sudo yum install git
+sudo yum install git -y
 git config --global user.name "$USER $(hostname)"
 git config --global user.email "$USER@$(hostname)"
 ```
