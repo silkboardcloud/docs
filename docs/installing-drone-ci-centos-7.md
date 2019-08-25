@@ -19,7 +19,7 @@ drone/drone:0.8.5
 
 sudo docker run \
 -v /var/run/docker.sock:/var/run/docker.sock \
--e DRONE_SERVER=drone.example.com:9001 \
+-e DRONE_SERVER=drone.example.com:9000 \
 -e DRONE_DEBUG=true \
 -e DRONE_SECRET=secret  \
 --restart=always \
