@@ -29,5 +29,5 @@ sudo nginx -t # test settings
 sudo systemctl restart nginx
 
 # open in browser example.com after adding your machine ip in dns example.com -> 0.0.0.0
-curl http://shoppreocuriers.com
+curl http://example.com
 ```
