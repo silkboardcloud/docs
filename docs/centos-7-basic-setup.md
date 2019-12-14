@@ -29,7 +29,7 @@ sudo hostname server1.silkboard.in
 ```sh
 sudo systemctl mask firewalld
 sudo systemctl stop firewalld
-sudo yum remove firewalld
+sudo yum remove firewalld-y
 ```
 
 ### Setup Timezone
