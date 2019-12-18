@@ -47,7 +47,7 @@ SSH server settings are stored in the `/etc/ssh/sshd_config` file.
 To disable root logins, make sure you have the following entry `PermitRootLogin no`*
 
 ```sh
-sudo sed -i '/#PermitRootLogin yes/c\PermitRootLogin no' /etc/ssh/sshd_config
+sudo sed -i 's/#PermitRootLogin yes/PermitRootLogin no/p' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 ## next execute disable selinux 
 ```
