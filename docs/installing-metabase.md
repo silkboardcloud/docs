@@ -5,6 +5,7 @@ Visit https://metabase.com/start/jar.html
 right click on Download, Click on Copy Link Address
 
 ```sh
+sudo yum install java-1.8.0-openjdk-devel -y
 cd /usr/bin
 sudo wget http://downloads.metabase.com/v0.32.10/metabase.jar
 sudo chmod +x metabase.jar
